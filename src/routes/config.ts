@@ -5,22 +5,22 @@ import Profile from "../pages/Profile";
 
 const routes = [
   {
-    path: ["/profile"],
+    path: "/profile",
     exact: true,
     component: Profile,
   },
   {
-    path: ["/projects"],
+    path: "/projects",
     exact: true,
     component: Projects,
   },
   {
-    path: ["/skills"],
+    path: "/skills",
     exact: true,
     component: Skills,
   },
   {
-    path: ["/experience"],
+    path: "/experience",
     exact: true,
     component: Experience,
   },

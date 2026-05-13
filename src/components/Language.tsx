@@ -3,6 +3,7 @@ import { Menu, Transition } from "@headlessui/react";
 import { withTranslation } from "react-i18next";
 import i18n from "i18next";
 import moment from "moment";
+// @ts-ignore
 import "moment/locale/es";
 
 import { ENGLISH, ESPANOL } from "../constants";
@@ -17,7 +18,10 @@ const Language = () => {
 
   return (
     <>
-      <Menu as="div" className="relative inline-block text-left text-base font-normal">
+      <Menu
+        as="div"
+        className="relative inline-block text-left text-base font-normal"
+      >
         <Menu.Button className="dark:bg-gray-700 dark:text-gray-200 relative z-10 block rounded-md bg-white p-2 focus:outline-none">
           <div className="text-base flex">
             <svg
@@ -53,7 +57,9 @@ const Language = () => {
                   id={ENGLISH}
                   onClick={(e) => handleChange(e, "en")}
                   className={`${
-                    active ? "bg-gray-200 dark:bg-gray-700 text-yellow-500" : "text-gray-900"
+                    active
+                      ? "bg-gray-200 dark:bg-gray-700 text-yellow-500"
+                      : "text-gray-900"
                   } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                 >
                   {ENGLISH}
@@ -66,7 +72,9 @@ const Language = () => {
                   id={ESPANOL}
                   onClick={(e) => handleChange(e, "es")}
                   className={`${
-                    active ? "bg-gray-200 dark:bg-gray-700 text-yellow-500" : "text-gray-900"
+                    active
+                      ? "bg-gray-200 dark:bg-gray-700 text-yellow-500"
+                      : "text-gray-900"
                   } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                 >
                   {ESPANOL}
