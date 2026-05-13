@@ -1,5 +1,5 @@
 import React, { useState, Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
+import { Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react";
 import i18n from "i18next";
 import moment from "moment";
 // @ts-ignore
@@ -17,11 +17,8 @@ const Language = () => {
 
   return (
     <>
-      <Menu
-        as="div"
-        className="relative inline-block text-left text-base font-normal"
-      >
-        <Menu.Button className="dark:bg-gray-700 dark:text-gray-200 relative z-10 block rounded-md bg-white p-2 focus:outline-none">
+      <Menu>
+        <MenuButton className="dark:bg-gray-700 dark:text-gray-200 relative z-10 block rounded-md bg-white p-2 focus:outline-none">
           <div className="text-base flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +36,7 @@ const Language = () => {
             </svg>
             {language}
           </div>
-        </Menu.Button>
+        </MenuButton>
         <Transition
           as={Fragment}
           enter="transition ease-out duration-500"
@@ -49,8 +46,8 @@ const Language = () => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95 duration-100"
         >
-          <Menu.Items className="absolute z-10 p-2 right-0 w-24 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none cursor-pointer">
-            <Menu.Item
+          <MenuItems className="absolute z-10 p-2 right-0 w-24 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none cursor-pointer">
+            <MenuItem
               as="li"
               id={ENGLISH}
               onClick={(e) => handleChange(e, "en")}
@@ -63,8 +60,8 @@ const Language = () => {
               }
             >
               {ENGLISH}
-            </Menu.Item>
-            <Menu.Item
+            </MenuItem>
+            <MenuItem
               as="li"
               id={ESPANOL}
               onClick={(e) => handleChange(e, "es")}
@@ -77,8 +74,8 @@ const Language = () => {
               }
             >
               {ESPANOL}
-            </Menu.Item>
-          </Menu.Items>
+            </MenuItem>
+          </MenuItems>
         </Transition>
       </Menu>
     </>
