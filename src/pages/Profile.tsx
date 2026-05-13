@@ -1,12 +1,12 @@
 import React from "react";
-import { withTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import i18n from "i18next";
 import { Seo } from "../components/Seo";
 import { DEVELOPER } from "../contents/index";
 import { CV } from "../contents";
 
-const Profile = (props: any) => {
-  const { t } = props;
+const Profile = () => {
+  const { t } = useTranslation();
 
   return (
     <div>
@@ -19,7 +19,11 @@ const Profile = (props: any) => {
       <div className="grid grid-cols-1 px-10 py-10 dark:bg-gray-800">
         <div className="mt-8 md:mt-0 md:space-x-10 md:grid grid-cols-3 justify-center md:py-20">
           <div className="grid justify-center items-center order-1 col-span-1">
-            <img className="lg:h-78 md:h-64 h-40 rounded-full" src={DEVELOPER.image} alt="" />
+            <img
+              className="lg:h-78 md:h-64 h-40 rounded-full"
+              src={DEVELOPER.image}
+              alt=""
+            />
           </div>
           <div className="mt-8 md:mt-0 lg:justify-end col-span-2">
             <h1 className="text-4xl text-gray-800 text-center md:text-left font-bold mb-6 dark:text-gray-200">
@@ -28,7 +32,7 @@ const Profile = (props: any) => {
             <p className="text-xl text-gray-800 text-center md:text-left dark:text-gray-200">
               {t("about")}
             </p>
-            <div className='flex justify-center md:justify-start'>
+            <div className="flex justify-center md:justify-start">
               <a
                 href={i18n.language === "en" ? CV.english : CV.spanish}
                 target={"_blank"}
@@ -45,4 +49,4 @@ const Profile = (props: any) => {
   );
 };
 
-export default withTranslation()(Profile);
+export default Profile;

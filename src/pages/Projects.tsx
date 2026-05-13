@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { withTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import ProjectCard from "../components/ProjectCard";
 import { Seo } from "../components/Seo";
 import { DEVELOPER } from "../contents/index";
 import { PROJECTS_EN, PROJECTS_ES } from "../contents";
 import i18n from "i18next";
 
-const Projects = (props: any) => {
+const Projects = () => {
   const [projects, setProjects] = useState<any[]>([]);
-  const { t } = props;
+  const { t } = useTranslation();
 
   useEffect(() => {
-    i18n.language === "en" ? setProjects(PROJECTS_EN) : setProjects(PROJECTS_ES);
+    i18n.language === "en"
+      ? setProjects(PROJECTS_EN)
+      : setProjects(PROJECTS_ES);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [i18n.language]);
 
@@ -44,4 +46,4 @@ const Projects = (props: any) => {
   );
 };
 
-export default withTranslation()(Projects);
+export default Projects;

@@ -1,12 +1,12 @@
 import React from "react";
 import { SkillBars } from "../components/SkillBars";
-import { withTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { BACKEND, FRONTEND, DB, OTHERS } from "../contents";
 import { Seo } from "../components/Seo";
 import { DEVELOPER } from "../contents/index";
 
-const Skills = (props: any) => {
-  const { t } = props;
+const Skills = () => {
+  const { t } = useTranslation();
 
   return (
     <div>
@@ -26,4 +26,4 @@ const Skills = (props: any) => {
   );
 };
 
-export default withTranslation()(Skills);
+export default Skills;

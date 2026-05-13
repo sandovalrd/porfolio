@@ -1,6 +1,5 @@
 import React, { useState, Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { withTranslation } from "react-i18next";
 import i18n from "i18next";
 import moment from "moment";
 // @ts-ignore
@@ -88,4 +87,4 @@ const Language = () => {
   );
 };
 
-export default withTranslation()(Language);
+export default Language;

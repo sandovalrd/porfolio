@@ -6,11 +6,12 @@ import { Linkedin } from "./Linkedin";
 import MenuItem from "./MenuItem";
 import Title from "./Title";
 import { Github } from "./Github";
-import { withTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { SOCIALINKS } from "../contents";
 import { DEVELOPER } from "../contents";
 
-const Header = ({ t }: any) => {
+const Header = () => {
+  const { t } = useTranslation();
   const { theme, setTheme } = useTheme();
 
   return (
@@ -25,9 +26,9 @@ const Header = ({ t }: any) => {
         </div>
         <div className="space-x-3 flex flex-row items-center">
           <Language />
-          <Instagram link={SOCIALINKS.instagram}/>
-          <Github link={SOCIALINKS.githut}/>
-          <Linkedin link={SOCIALINKS.Linkedin}/>
+          <Instagram link={SOCIALINKS.instagram} />
+          <Github link={SOCIALINKS.githut} />
+          <Linkedin link={SOCIALINKS.Linkedin} />
           <button
             aria-label="Toggle Dark Mode"
             type="button"
@@ -48,4 +49,4 @@ const Header = ({ t }: any) => {
   );
 };
 
-export default withTranslation()(Header);
+export default Header;
