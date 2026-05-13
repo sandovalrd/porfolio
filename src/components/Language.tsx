@@ -17,8 +17,8 @@ const Language = () => {
 
   return (
     <>
-      <Menu>
-        <MenuButton className="dark:bg-gray-700 dark:text-gray-200 relative z-10 block rounded-md bg-white p-2 focus:outline-none">
+      <Menu as="div" className="relative inline-block text-left">
+        <MenuButton className="dark:bg-gray-700 dark:text-gray-200 z-10 block rounded-md bg-white p-2 focus:outline-none">
           <div className="text-base flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ const Language = () => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95 duration-100"
         >
-          <MenuItems className="absolute z-10 p-2 right-0 w-24 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none cursor-pointer">
+          <MenuItems className="absolute right-0 top-full z-50 mt-1 w-28 origin-top-right rounded-md bg-white p-2 shadow-lg ring-1 ring-black/5 focus:outline-none dark:bg-gray-700 dark:ring-white/10">
             <MenuItem
               as="li"
               id={ENGLISH}
@@ -55,7 +55,7 @@ const Language = () => {
                 `${
                   active
                     ? "bg-gray-200 dark:bg-gray-700 text-yellow-500"
-                    : "text-gray-900"
+                    : "text-gray-900 dark:text-gray-200"
                 } group flex rounded-md items-center w-full px-2 py-2 text-sm cursor-pointer`
               }
             >
@@ -69,7 +69,7 @@ const Language = () => {
                 `${
                   active
                     ? "bg-gray-200 dark:bg-gray-700 text-yellow-500"
-                    : "text-gray-900"
+                    : "text-gray-900 dark:text-gray-200"
                 } group flex rounded-md items-center w-full px-2 py-2 text-sm cursor-pointer`
               }
             >

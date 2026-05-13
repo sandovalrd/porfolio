@@ -1,10 +1,6 @@
 import React from "react";
-import { Helmet as _Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
-
-// Fix for react-helmet with React 19
-const Helmet = _Helmet as any;
-
 import { DEVELOPER } from "../contents";
 
 export const Seo = (props: any) => {

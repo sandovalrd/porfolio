@@ -6,7 +6,7 @@ import moment from "moment";
 const Router = () => {
   moment.locale("en"); // default languaje
   return (
-    <div className="bg-gray-100">
+    <div className="flex min-h-0 flex-1 flex-col bg-gray-100 dark:bg-gray-800 w-full">
       <Routes>
         {routes.map((routeItem, idx) => {
           return (

@@ -20,7 +20,7 @@ const ProjectCard = (props: ProjectCardProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-screen h-screen flex flex-row flex-wrap p-6">
+    <div className="flex w-full max-w-full flex-row flex-wrap p-6">
       <div className="mx-auto max-w-4xl">
         <div className="rounded-lg shadow-lg bg-gray-600 w-full flex flex-row flex-wrap p-4 antialiased">
           <div className="md:w-1/2  w-full">

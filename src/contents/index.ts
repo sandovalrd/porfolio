@@ -1,10 +1,11 @@
 export const DEVELOPER = {
   name: "Rafael Sandoval",
-  job: "Full Stack Developer",
-  image: "/avatar.jfif",
+  job: "Senior Software Developer",
+  image: "/avatar.png",
   type: "website",
-  website: "https://sandovalrd.website",
+  website: "https://sandovalrd.dev",
 };
+
 export const FRONTEND = [
   {
     type: "Javascript",
@@ -45,19 +46,23 @@ export const BACKEND = [
     level: 95,
   },
   {
+    type: "Golang",
+    level: 90,
+  },
+  {
+    type: "Python",
+    level: 90,
+  },
+  {
+    type: "NestJs",
+    level: 90,
+  },
+  {
     type: "Unit tests",
     level: 90,
   },
   {
-    type: "NestJS",
-    level: 80,
-  },
-  {
     type: "PHP",
-    level: 70,
-  },
-  {
-    type: "Python",
     level: 70,
   },
 ];
@@ -68,22 +73,22 @@ export const OTHERS = [
   },
   {
     type: "Linux",
-    level: 85,
+    level: 95,
   },
   {
     type: "Docker",
-    level: 80,
-  },
-  {
-    type: "Webpack",
-    level: 75,
-  },
-  {
-    type: "CI / CO",
-    level: 70,
+    level: 90,
   },
   {
     type: "Kubernetes",
+    level: 85,
+  },
+  {
+    type: "GCP Google Cloud Platform",
+    level: 70,
+  },
+  {
+    type: "Terraform",
     level: 60,
   },
 ];
@@ -120,12 +125,12 @@ export const SOCIALINKS = {
 };
 export const EXPERIENCE_EN = [
   {
-    job: "Senior Software Developer",
+    job: "Full Stack Developer",
     image: "img/falabella.jpeg",
     content:
-      "Insourced by Fallabella Technology to give continuity and maintenance to the development of microservices and APIs of the different business areas, mainly using NodeJs or NestJS for this purpose.",
+      "Insourced by Fallabella Technology to give continuity and maintenance to the development of microservices and APIs of the different business areas, mainly using NodeJs or NestJs for this purpose.",
     company: "Fallabela",
-    date: "January 2022",
+    date: "January 2022 - Mayo 2026",
     web: "https://falabella.com/",
   },
   {
@@ -185,19 +190,19 @@ export const EXPERIENCE_EN = [
 ];
 export const EXPERIENCE_ES = [
   {
-    job: "Senior Software Developer",
+    job: "Full Stack Developer",
     image: "img/falabella.jpeg",
     content:
-      "Internalizado por Fallabella Tecnología para dar continuidad y mantenimiento a los desarrollos de microservicios y APIs de las diferentes áreas del negocio, utilizando principalmente NodeJs o NestJS para tal fin.",
+      "Lideré la migración de la infraestructura de Documentos Tributarios Electrónicos (DTE) hacia una arquitectura cloud en GCP, transformando servicios legados en NodeJs/NestJs a microservicios de alto rendimiento en Golang. Esta modernización optimizó los tiempos de respuesta y garantizó la escalabilidad en la entrega de facturas electrónicas sobre una arquitectura en Google Cloud Platform (GCP).",
     company: "Fallabela",
-    date: "Enero 2021",
+    date: "Enero 2022 - May 2026",
     web: "https://falabella.com/",
   },
   {
     job: "Developer Full Stack",
     image: "img/xintec.png",
     content:
-      "Desarrollo de microservicios para las diferentes areas de Falabella, utilizando NodeJs o NestJs. Desarrollo web y consulta de API con ReactJs. Trabajando con metodologías ágiles.",
+      "Desarrollé microservicios para diversas áreas de Falabella utilizando NodeJs y NestJs, además de liderar el desarrollo web y la integración de APIs con ReactJS, ejecuté estas funciones trabajando bajo metodologías ágiles.",
     company: "Xintec",
     date: "April 2021 - December 2021",
     web: "https://xintec.cl/",
@@ -206,7 +211,7 @@ export const EXPERIENCE_ES = [
     job: "Frontend Developer",
     image: "img/imagemaker.png",
     content:
-      "Participar en el desarrollo del portal de seguros del Banco ScotiaBank como único desarrollador frontend utilizando ReactJs, participar junto al UX/UI en el diseño de interfaces de usuario utilizando el software Figma. Se trabajo bajo metodología ágiles.",
+      "Participé en el desarrollo del portal de seguros del Banco ScotiaBank como único desarrollador frontend en ReactJs. Se trabajo bajo metodologías ágiles.",
     company: "Imagemaker",
     date: "June 2020 - April 2021",
     web: "https://www.imagemaker.com/",
@@ -215,7 +220,7 @@ export const EXPERIENCE_ES = [
     job: "Full Stack Developer",
     image: "img/trebol.jpeg",
     content:
-      "Desarrollo de microservicios para el sistema de admisión de la Clínica Alemana, utilizando NodeJs. Participar en el desarrollo del sitio web de dicho sistema utilizando ReactJs. Se trabajo bajo metodologías ágiles.",
+      "Desarrollé microservicios para el sistema de admisión de la Clínica Alemana, utilizando NodeJs, además de participar en el desarrollo del sitio web de dicho sistema utilizando ReactJs. Se trabajo bajo metodologías ágiles.",
     company: "Trebol IT",
     date: "September 2019 - June 2020",
     web: "https://www.trebol-it.com/",
@@ -224,7 +229,7 @@ export const EXPERIENCE_ES = [
     job: "Software Developer",
     image: "img/acepta-sovos.jpeg",
     content:
-      "Desarrollo de microservicios en NodeJs y Python para mejorar las aplicaciones web del negocio de factura digital. Desarrollo de procedimientos almacenados en la base de datos de Posgrest.",
+      "Desarrollé microservicios en Python para la unidad de DTE e implementé mejoras técnicas en el sistema ICar para aumentar la confiabilidad de la plataforma. Utilicé PostgreSQL Shell (psql) para la creación de scripts y el ajuste de rendimiento, garantizando la consistencia de los datos y optimizando los tiempos de respuesta en plataformas transaccionales.",
     company: "Acepta",
     date: "March 2018 - September 2019",
     web: "https://www.acepta.com/",
@@ -233,7 +238,7 @@ export const EXPERIENCE_ES = [
     job: "Senior Software Developer",
     image: "img/pdvsa.png",
     content:
-      "Desarrollo de aplicaciones relacionadas con la extracción y refinamiento del petróleo utilizando herramientas como Python, PHP y NodeJS en el Backend. Líder de proyectos de celulas de desarrollo. En algunos proyectos se trabajo bajo metodologías ágiles.",
+      "Diseñé y desarrollé sistemas distribuidos y aplicaciones backend para la producción y cadena de suministro petrolera usando Python, NodeJs y PHP. Lideré equipos ágiles durante todo el ciclo de vida del software, optimizando bases de datos a gran escala e integrando sistemas legados con arquitecturas modernas. Desarrollé herramientas de automatización que mejoraron significativamente la confiabilidad de los datos y el monitoreo operativo.",
     company: "PDVSA",
     date: "March 2004 - December 2017",
     web: "http://www.pdvsa.com/",
@@ -242,7 +247,7 @@ export const EXPERIENCE_ES = [
     job: "Analista de Sistemas",
     image: "img/bancaribe.jpeg",
     content:
-      "Desarrollo de procedimientos almacenados en la base de datos Sybase. Análisis y solución de incidencias en las cuentas corrientes de los clientes del Banco.",
+      "Desarrollé procedimientos almacenados en la base de datos Sybase. Análisis y solución de incidencias en las cuentas corrientes de los clientes del Banco.",
     company: "BANCARIBE",
     date: "January 2000 - March 2004",
     web: "https://www.bancaribe.com.ve/",
@@ -258,7 +263,7 @@ export const PROJECTS_EN = [
       "Web portfolio available to show the profile and projects of the developer.",
     technology: "Developed in ReactJs",
     domain: "https://sandovalrd.website/",
-    state: "In posgress",
+    state: "Ready",
     color: "bg-yellow-500",
     type: "Frontend",
     date: "20210901",
@@ -271,7 +276,7 @@ export const PROJECTS_ES = [
       "Portafolio web disponible para mostrar el perfil y proyectos del desarrollador.",
     technology: "Desarrollado en ReactJs",
     domain: "https://sandovalrd.website/",
-    state: "En progreso",
+    state: "Listo",
     color: "bg-yellow-500",
     type: "Frontend",
     date: "20210901",

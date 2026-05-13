@@ -1,21 +1,18 @@
-// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: "class", // or 'media' or 'class'
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  darkMode: "class",
   theme: {
-    theme: {
-      extend: {
-        transitionDuration: {
-          0: "0ms",
-          2000: "2000ms",
-          4000: "4000ms",
-        },
+    extend: {
+      maxWidth: {
+        "8xl": "88rem",
+      },
+      transitionDuration: {
+        0: "0ms",
+        2000: "2000ms",
+        4000: "4000ms",
       },
     },
-  },
-  variants: {
-    extend: {},
-    display: ["responsive", "group-hover", "group-focus"],
   },
   plugins: [],
 };

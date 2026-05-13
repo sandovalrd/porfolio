@@ -20,7 +20,7 @@ const Profile = () => {
         <div className="mt-8 md:mt-0 md:space-x-10 md:grid grid-cols-3 justify-center md:py-20">
           <div className="grid justify-center items-center order-1 col-span-1">
             <img
-              className="lg:h-78 md:h-64 h-40 rounded-full"
+              className="h-40 w-40 rounded-full object-cover object-[50%_18%] shadow-md ring-2 ring-gray-200 dark:ring-gray-600 md:h-56 md:w-56 md:object-[50%_15%] lg:h-64 lg:w-64 lg:object-[50%_12%]"
               src={DEVELOPER.image}
               alt=""
             />

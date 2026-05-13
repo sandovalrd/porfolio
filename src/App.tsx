@@ -8,12 +8,14 @@ import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <div className="w-full mx-auto bg-white dark:bg-gray-700">
-      <div className="max-w-8xl pt-10 md:pt-20">
+    <div className="flex min-h-screen w-full flex-col bg-white dark:bg-gray-700">
+      <div className="flex w-full flex-1 flex-col pt-10 md:pt-20">
         <BrowserRouter>
           <I18nextProvider i18n={i18n}>
             <Header />
-            <Router />
+            <div className="flex min-h-0 flex-1 flex-col">
+              <Router />
+            </div>
             <Footer />
           </I18nextProvider>
         </BrowserRouter>
