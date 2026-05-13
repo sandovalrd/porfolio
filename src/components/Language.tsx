@@ -50,35 +50,33 @@ const Language = () => {
           leaveTo="transform opacity-0 scale-95 duration-100"
         >
           <Menu.Items className="absolute z-10 p-2 right-0 w-24 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none cursor-pointer">
-            <Menu.Item>
-              {({ active }) => (
-                <li
-                  id={ENGLISH}
-                  onClick={(e) => handleChange(e, "en")}
-                  className={`${
-                    active
-                      ? "bg-gray-200 dark:bg-gray-700 text-yellow-500"
-                      : "text-gray-900"
-                  } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                >
-                  {ENGLISH}
-                </li>
-              )}
+            <Menu.Item
+              as="li"
+              id={ENGLISH}
+              onClick={(e) => handleChange(e, "en")}
+              className={({ active }: { active: boolean }) =>
+                `${
+                  active
+                    ? "bg-gray-200 dark:bg-gray-700 text-yellow-500"
+                    : "text-gray-900"
+                } group flex rounded-md items-center w-full px-2 py-2 text-sm cursor-pointer`
+              }
+            >
+              {ENGLISH}
             </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <li
-                  id={ESPANOL}
-                  onClick={(e) => handleChange(e, "es")}
-                  className={`${
-                    active
-                      ? "bg-gray-200 dark:bg-gray-700 text-yellow-500"
-                      : "text-gray-900"
-                  } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
-                >
-                  {ESPANOL}
-                </li>
-              )}
+            <Menu.Item
+              as="li"
+              id={ESPANOL}
+              onClick={(e) => handleChange(e, "es")}
+              className={({ active }: { active: boolean }) =>
+                `${
+                  active
+                    ? "bg-gray-200 dark:bg-gray-700 text-yellow-500"
+                    : "text-gray-900"
+                } group flex rounded-md items-center w-full px-2 py-2 text-sm cursor-pointer`
+              }
+            >
+              {ESPANOL}
             </Menu.Item>
           </Menu.Items>
         </Transition>
