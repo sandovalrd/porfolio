@@ -25,7 +25,6 @@ export interface Project {
 
 export interface SocialLinks {
   linkedin: string;
-  instagram: string;
   github: string;
 }
 

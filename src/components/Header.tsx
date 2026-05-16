@@ -1,6 +1,5 @@
 import useTheme from "../hooks/useTheme";
 import { IconDarkMode } from "./IconDarkMode";
-import Instagram from "./Instagram";
 import Language from "./Language";
 import { Linkedin } from "./Linkedin";
 import MenuItem from "./MenuItem";
@@ -26,7 +25,6 @@ const Header = () => {
         </div>
         <div className="space-x-3 flex flex-row items-center">
           <Language />
-          <Instagram link={SOCIALINKS.instagram} />
           <Github link={SOCIALINKS.github} />
           <Linkedin link={SOCIALINKS.linkedin} />
           <button

@@ -120,7 +120,6 @@ export const DB = [
 ];
 export const SOCIALINKS = {
   linkedin: "https://www.linkedin.com/in/rafael-sandoval-0b441179/",
-  instagram: "https://www.instagram.com/sandovalrd/",
   github: "https://github.com/sandovalrd",
 };
 export const EXPERIENCE_EN = [

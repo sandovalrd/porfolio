@@ -1,7 +1,6 @@
 import React from "react";
 import { SOCIALINKS } from "../contents";
 import { Github } from "./Github";
-import Instagram from "./Instagram";
 import { Linkedin } from "./Linkedin";
 import { DEVELOPER } from "../contents";
 
@@ -16,7 +15,6 @@ export const Footer = () => {
             <p className="text-gray-400">{DEVELOPER.job}</p>
           </div>
           <div className="space-x-3 flex flex-row items-center">
-            <Instagram link={SOCIALINKS.instagram} />
             <Github link={SOCIALINKS.github} />
             <Linkedin link={SOCIALINKS.linkedin} />
           </div>
