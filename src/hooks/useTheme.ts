@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 
 export default function useTheme() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
   useEffect(() => {
+    localStorage.setItem("theme", theme);
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
       document.documentElement.classList.remove("light");

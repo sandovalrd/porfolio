@@ -1,12 +1,11 @@
-import React from "react";
+import type { Experience } from "../types";
 
-export const ExpeienceCard = (props: any) => {
-  const { job, company, content, image, date, web } = props;
+export const ExperienceCard = ({ job, company, content, image, date, web }: Experience) => {
   return (
     <div>
       <div className="max-w-sm sm:max-w-md bg-white dark:bg-gray-200 border-2 border-gray-300 p-6 rounded-md tracking-wide shadow-xl">
         <div id="header" className="flex items-center mb-4">
-          <img alt="avatar" className="w-20 border-gray-300 rounded-lg shadow-sm" src={image} />
+          <img alt={`${company} logo`} className="w-20 border-gray-300 rounded-lg shadow-sm" src={image} />
           <div id="header-text" className="leading-5 ml-6 sm">
             <h4 id="name" className="font-semibold text-base">
               {job}

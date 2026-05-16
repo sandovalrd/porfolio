@@ -1,5 +1,8 @@
-export const IconDarkMode = (props: any) => {
-  const { theme } = props;
+interface IconDarkModeProps {
+  theme: string;
+}
+
+export const IconDarkMode = ({ theme }: IconDarkModeProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -7,6 +10,7 @@ export const IconDarkMode = (props: any) => {
       fill="currentColor"
       stroke="currentColor"
       className="w-4 h-4 text-yellow-500 dark:text-yellow-500"
+      aria-hidden="true"
     >
       {theme === "dark" ? (
         <path

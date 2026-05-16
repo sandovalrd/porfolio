@@ -1,21 +1,19 @@
-import React, { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import ProjectCard from "../components/ProjectCard";
 import { Seo } from "../components/Seo";
 import { DEVELOPER } from "../contents/index";
 import { PROJECTS_EN, PROJECTS_ES } from "../contents";
-import i18n from "i18next";
+import type { Project } from "../types";
 
 const Projects = () => {
-  const [projects, setProjects] = useState<any[]>([]);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
 
-  useEffect(() => {
-    i18n.language === "en"
-      ? setProjects(PROJECTS_EN)
-      : setProjects(PROJECTS_ES);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [i18n.language]);
+  const projects: Project[] = useMemo(
+    () => (currentLang === "en" ? PROJECTS_EN : PROJECTS_ES),
+    [currentLang]
+  );
 
   return (
     <div>

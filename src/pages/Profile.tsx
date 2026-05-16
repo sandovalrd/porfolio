@@ -22,7 +22,7 @@ const Profile = () => {
             <img
               className="h-40 w-40 rounded-full object-cover object-[50%_18%] shadow-md ring-2 ring-gray-200 dark:ring-gray-600 md:h-56 md:w-56 md:object-[50%_15%] lg:h-64 lg:w-64 lg:object-[50%_12%]"
               src={DEVELOPER.image}
-              alt=""
+              alt={DEVELOPER.name}
             />
           </div>
           <div className="mt-8 md:mt-0 lg:justify-end col-span-2">

@@ -1,18 +1,13 @@
-import React, { useState, Fragment } from "react";
+import { Fragment } from "react";
 import { Menu, MenuButton, MenuItem, MenuItems, Transition } from "@headlessui/react";
 import i18n from "i18next";
-import moment from "moment";
-// @ts-ignore
-import "moment/locale/es";
 
 import { ENGLISH, ESPANOL } from "../constants";
 
 const Language = () => {
-  const [language, setLanguage] = useState(ENGLISH);
-  const handleChange = (event: any, language: string) => {
-    language === "en" ? setLanguage(ENGLISH) : setLanguage(ESPANOL);
+  const displayLanguage = i18n.language === "en" ? ENGLISH : ESPANOL;
+  const handleChange = (language: string) => {
     i18n.changeLanguage(language);
-    moment.locale(language);
   };
 
   return (
@@ -34,7 +29,7 @@ const Language = () => {
                 d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
               />
             </svg>
-            {language}
+            {displayLanguage}
           </div>
         </MenuButton>
         <Transition
@@ -50,7 +45,7 @@ const Language = () => {
             <MenuItem
               as="li"
               id={ENGLISH}
-              onClick={(e) => handleChange(e, "en")}
+              onClick={() => handleChange("en")}
               className={({ active }: { active: boolean }) =>
                 `${
                   active
@@ -64,7 +59,7 @@ const Language = () => {
             <MenuItem
               as="li"
               id={ESPANOL}
-              onClick={(e) => handleChange(e, "es")}
+              onClick={() => handleChange("es")}
               className={({ active }: { active: boolean }) =>
                 `${
                   active

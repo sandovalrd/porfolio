@@ -2,15 +2,18 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { RoughNotation } from "react-rough-notation";
 
-const MenuItem = (props: any) => {
+interface MenuItemProps {
+  route: string;
+  item: string;
+}
+
+const MenuItem = ({ route, item }: MenuItemProps) => {
   const location = useLocation();
-  const { route, item } = props;
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    location.pathname === `/${route}` ? setActive(true) : setActive(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location]);
+    setActive(location.pathname === `/${route}`);
+  }, [location, route]);
 
   return (
     <>

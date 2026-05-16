@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 
-const Title = (props: any) => {
-  const { fullName, job } = props;
+interface TitleProps {
+  fullName: string;
+  job: string;
+}
+
+const Title = ({ fullName, job }: TitleProps) => {
   return (
     <div className="flex flex-col">
       <Link to="/">

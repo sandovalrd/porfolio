@@ -27,8 +27,8 @@ const Header = () => {
         <div className="space-x-3 flex flex-row items-center">
           <Language />
           <Instagram link={SOCIALINKS.instagram} />
-          <Github link={SOCIALINKS.githut} />
-          <Linkedin link={SOCIALINKS.Linkedin} />
+          <Github link={SOCIALINKS.github} />
+          <Linkedin link={SOCIALINKS.linkedin} />
           <button
             aria-label="Toggle Dark Mode"
             type="button"

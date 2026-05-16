@@ -1,23 +1,19 @@
-import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
-import moment from "moment";
+import { formatRelativeTime } from "../utils/formatRelativeTime";
+import type { Project } from "../types";
 
-interface ProjectCardProps {
-  description: string;
-  technology: string[];
-  domain: string;
-  state: string;
-  color: string;
-  branch: string;
-  type?: string;
-  date?: string;
-}
-
-const ProjectCard = (props: ProjectCardProps) => {
-  const { description, technology, domain, state, color, branch, type, date } =
-    props;
-  const { t } = useTranslation();
+const ProjectCard = ({
+  description,
+  technology,
+  domain,
+  state,
+  color,
+  branch,
+  type,
+  date,
+}: Project) => {
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="flex w-full max-w-full flex-row flex-wrap p-6">
@@ -67,7 +63,7 @@ const ProjectCard = (props: ProjectCardProps) => {
                     {t("created")}
                   </div>
                   <div className="text-sm text-gray-300 leading-tight">
-                    {moment(date, "YYYYMMDD").fromNow()}
+                    {date && formatRelativeTime(date, i18n.language)}
                   </div>
                 </div>
                 <div className="grid grid-cols-1">

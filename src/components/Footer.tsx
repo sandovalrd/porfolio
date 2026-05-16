@@ -17,8 +17,8 @@ export const Footer = () => {
           </div>
           <div className="space-x-3 flex flex-row items-center">
             <Instagram link={SOCIALINKS.instagram} />
-            <Github link={SOCIALINKS.githut} />
-            <Linkedin link={SOCIALINKS.Linkedin} />
+            <Github link={SOCIALINKS.github} />
+            <Linkedin link={SOCIALINKS.linkedin} />
           </div>
         </div>
       </div>
